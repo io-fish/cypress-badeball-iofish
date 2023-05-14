@@ -1,0 +1,54 @@
+{
+  "name": "cypress-badeball-iofish",
+  "version": "1.0.0",
+  "description": "Cypress cucumber with Badeball version to check html report",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iofishnick/cypress-badeball-iofish.git"
+  },
+  "keywords": [
+    "Cypress"
+  ],
+  "author": "Io. Fish",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iofishnick/cypress-badeball-iofish/issues"
+  },
+  "homepage": "https://github.com/iofishnick/cypress-badeball-iofish#readme",
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^17.1.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "esbuild": "^0.17.19"
+  },
+  "cypress-cucumber-preprocessor": {
+    
+    "stepDefinitions": [
+      "cypress/e2e/[filepath]/**/*.{js,ts}",
+      "cypress/e2e/[filepath].{js,ts}",
+      "cypress/support/step_definitions/**/*.{js,ts}",
+      "cypress/e2e/**/*.{js,ts}"
+    ],
+    "json": {
+      "enabled": true,
+      "output": "reports/json/cucumber-report.json"
+    },
+    "html": {
+      "enabled": true,
+      "output": "reports/html/cucumber-report.html"
+    },
+    "messages": {
+      "enabled": true,
+      "output": "reports/messages/cucumber-report.ndjson"
+    },
+    "omitFiltered": true,
+    "filterSpecs": true
+  },
+  "devDependencies": {
+    "cypress": "^12.12.0",
+    "typescript": "^5.0.4"
+  }
+}
