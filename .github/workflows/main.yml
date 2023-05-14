@@ -23,3 +23,9 @@ jobs:
          name: reports
          if-no-files-found: error
          path: reports/html
+     - name: Save multi reports folder
+       uses: actions/upload-artifact@v3
+       with:
+         name: multi-reports
+         if-no-files-found: error
+         path: reports/multiple-html-report
