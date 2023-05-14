@@ -23,3 +23,9 @@ jobs:
          name: reports
          if-no-files-found: error
          path: reports/html
+     - name: Save video-scrshot folder
+       uses: actions/upload-artifact@v3
+       with:
+         name: video-scrshot
+         if-no-files-found: error
+         path: video
