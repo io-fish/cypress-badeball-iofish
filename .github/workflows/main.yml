@@ -16,7 +16,7 @@ jobs:
      - name: Run Cypress Test
        uses: cypress-io/github-action@v4
        with:
-         command: npx cypress run --browser chrome
+         command: npx cypress run && node .\reporter.js
      - name: Save reports folder
        uses: actions/upload-artifact@v3
        with:
