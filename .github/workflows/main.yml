@@ -17,9 +17,13 @@ jobs:
        uses: cypress-io/github-action@v4
        with:
          command: npx cypress run && node .\reporter.js
+     - name: Generate multi-html-report
+       uses: cypress-io/github-action@v4
+       with:
+         command: node reporter.js
      - name: Save reports folder
        uses: actions/upload-artifact@v3
        with:
          name: reports
          if-no-files-found: error
-         path: reports/html
+         path: reports
