@@ -35,7 +35,7 @@
     },
     "html": {
       "enabled": true,
-      "output": "reports/html/cucumber-report.html"
+      "output": "reports/html-report/cucumber-report.html"
     },
     "messages": {
       "enabled": true,
