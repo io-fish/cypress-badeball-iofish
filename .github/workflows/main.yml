@@ -16,7 +16,7 @@ jobs:
      - name: Run Cypress Test
        uses: cypress-io/github-action@v4
        with:
-         command: npx cypress run && node .\reporter.js
+         command: npx cypress run --browser chrome
      - name: Generate multi-html-report
        uses: cypress-io/github-action@v4
        with:
