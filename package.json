@@ -25,12 +25,8 @@
     "esbuild": "^0.17.19"
   },
   "cypress-cucumber-preprocessor": {
-    
     "stepDefinitions": [
-      "cypress/e2e/[filepath]/**/*.{js,ts}",
-      "cypress/e2e/[filepath].{js,ts}",
-      "cypress/support/step_definitions/**/*.{js,ts}",
-      "cypress/e2e/**/*.{js,ts}"
+      "cypress/e2e/**/*.js"
     ],
     "json": {
       "enabled": true,
@@ -48,7 +44,6 @@
     "filterSpecs": true
   },
   "devDependencies": {
-    "cypress": "^12.12.0",
-    "typescript": "^5.0.4"
+    "cypress": "^12.12.0"
   }
 }
