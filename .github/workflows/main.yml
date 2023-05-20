@@ -1,8 +1,8 @@
 name: Cypress Tests
-#on: [push]
-on:
-  schedule:
-    - cron: '30 11 * * *' # Runs at 14:30 UTC+3 every day
+on: [push]
+#on:
+  #schedule:
+    #- cron: '30 11 * * *' # Runs at 14:30 UTC+3 every day
 
 jobs:
  Cypress-Test:
