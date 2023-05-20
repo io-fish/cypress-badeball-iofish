@@ -1,5 +1,5 @@
-# cypress/e2e/duckduckgo.feature
+# cypress\e2e\bfeatureFiles\bduckduckgo.feature
 Feature: duckduckgo.com
   Scenario: visiting the frontpage
     When I visit duckduckgo.com
-    Then I should see a search bar
+    Then title should include DuckDuckGo

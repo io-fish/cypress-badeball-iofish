@@ -5,6 +5,6 @@ When("I visit duckduckgo.com", () => {
   cy.visit("https://www.duckduckgo.com");
 });
 
-Then("I should see a search bar", () => {
+Then("url should incluse duckduckgo", () => {
   cy.url().should("include", "duckduckgo");
 });
