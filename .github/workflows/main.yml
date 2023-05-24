@@ -22,12 +22,10 @@ jobs:
        with:
          command: npx cypress run --browser chrome
      - name: Generate multi-html-report
-       if: always()
        uses: cypress-io/github-action@v4
        with:
          command: node reporter.js
      - name: Save reports folder
-       if: always()
        uses: actions/upload-artifact@v3
        with:
          name: reports
