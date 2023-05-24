@@ -6,5 +6,5 @@ When("I visit duckduckgo.com", () => {
 });
 
 Then("title should include DuckDuckGo", () => {
-  cy.title().should("include", "DuckDuckGos");
+  cy.title().should("include", "DuckDuckGo");
 });
