@@ -51,7 +51,7 @@ Promise.all(promises)
     const records = [
       { description: 'Number of feature files for repository 1', value: files1.length },
       { description: 'Number of feature files for repository 2', value: files2.length },
-      { description: 'Number of common feature files', value: `${commonFiles.length} (${commonPercentage.toFixed(2)}%)` },
+      { description: 'Number of common feature files (Test Coverage)', value: `${commonFiles.length} (${commonPercentage.toFixed(2)}%)` },
       { description: `Number of missing feature files for ${repositories[1].owner}/${repositories[1].repo}`, value: `${missingFiles.length} (${percentageDiff.toFixed(2)}%)` },
       { description: 'Common feature files', value: commonFiles.join(', ') },
       { description: 'Missing feature files', value: missingFiles.join(', ') },
