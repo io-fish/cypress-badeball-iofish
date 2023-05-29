@@ -21,16 +21,16 @@ jobs:
        uses: cypress-io/github-action@v4
        with:
          command: npx cypress run --browser chrome
-     - name: Genarete the Test Coverage file
-       if: always()
-       uses: cypress--io/github-action@v4
-       with:
-         command: node testCoverage.js
      - name: Generate multi-html-report
        if: always()
        uses: cypress-io/github-action@v4
        with:
          command: node reporter.js
+     - name: Genarete the Test Coverage file
+       if: always()
+       uses: cypress-io/github-action@v4
+       with:
+         command: node testCoverage.js
      - name: Save reports folder
        if: always()
        uses: actions/upload-artifact@v3
