@@ -1,8 +1,12 @@
 const axios = require('axios');
 
-async function countFoldersAndFeatureFiles(owner, repo, path) {
+async function countFoldersAndFeatureFiles(owner, repo, path, token) {
   try {
-    const response = await axios.get(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`);
+    const response = await axios.get(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
     const contents = response.data;
 
     let folderCount = 0;
@@ -26,7 +30,7 @@ async function countFoldersAndFeatureFiles(owner, repo, path) {
 }
 
 // Usage example
-countFoldersAndFeatureFiles('ypsaros', 'cypress-badeball-iofish', 'cypress/e2e')
+countFoldersAndFeatureFiles('ypsaros', 'cypress-badeball-iofish', 'cypress/e2e', 'VsE+CK5TdaeHy8EDyv3a71nBvdQKlfDTFFZFk6je7Cs')
   .then(({ folderCount, featureFileCount }) => {
     console.log('Number of folders:', folderCount);
     console.log('Number of feature files:', featureFileCount);
