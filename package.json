@@ -22,6 +22,7 @@
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^17.1.0",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "@cypress/request": "^3.0.0",
     "@types/node-fetch": "^2.6.4",
     "axios": "^1.4.0",
     "csv-writer": "^1.6.0",
