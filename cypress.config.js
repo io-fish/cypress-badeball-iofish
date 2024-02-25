@@ -22,7 +22,6 @@ module.exports = defineConfig({
   projectId: "1vxovt",
   e2e: {
     specPattern: "**/*.feature",
-    setupNodeEvents,
-    videoUploadOnPasses: false
+    setupNodeEvents
   },
 });
