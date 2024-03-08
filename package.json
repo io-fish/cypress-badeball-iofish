@@ -24,7 +24,7 @@
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
     "@cypress/request": "^3.0.0",
     "@types/node-fetch": "^2.6.4",
-    "axios": "^1.4.0",
+    "axios": "^1.6.0",
     "csv-writer": "^1.6.0",
     "esbuild": "^0.17.19",
     "multiple-cucumber-html-reporter": "^3.4.0",
@@ -50,6 +50,6 @@
     "filterSpecs": true
   },
   "devDependencies": {
-    "cypress": "^12.12.0"
+    "cypress": "^13.6.6"
   }
 }

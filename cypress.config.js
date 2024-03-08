@@ -19,9 +19,9 @@ async function setupNodeEvents(on, config) {
 }
 
 module.exports = defineConfig({
+  projectId: "1vxovt", // cypress cloud project id
   e2e: {
     specPattern: "**/*.feature",
-    setupNodeEvents,
-    videoUploadOnPasses: false
+    setupNodeEvents
   },
 });
