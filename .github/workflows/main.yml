@@ -26,4 +26,4 @@ jobs:
         with:
           name: reports
           if-no-files-found: error
-          path: reports
+          path: reports/multi-html-report
