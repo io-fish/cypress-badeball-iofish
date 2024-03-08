@@ -18,27 +18,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install dependencies
         run: npm install
-      # - name: Use Node.js ${{ matrix.node-version }}
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: ${{ matrix.node-version }}
-      - name: Run Cypress Test
-        uses: cypress-io/github-action@v4
-        with:
-          command: npx cypress run --browser chrome
+      - name: Run Cypress tests
+        run: npm run cypress:run
       - name: Generate multi-html-report
-        if: always()
-        uses: cypress-io/github-action@v4
-        with:
-          command: node reporter.js
+        run: node reporter.js
       - name: Genarete the Test Coverage file
-        if: always()
-        uses: cypress-io/github-action@v4
-        with:
-          command: node testCoverage.js
+        run: node testCoverage.js
       - name: Save reports folder
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: reports
           if-no-files-found: error
