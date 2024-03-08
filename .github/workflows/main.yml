@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install dependencies
-        run: npm install
+        run: npm install --force
       - name: Run Cypress tests
         run: npm run cypress:run
       # - name: Generate multi-html-report
