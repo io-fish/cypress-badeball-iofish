@@ -41,7 +41,7 @@ Promise.all(promises)
 
     // Write the logs to a CSV file
     const csvWriter = createCsvWriter({
-      path: 'reports/TestCoverage.csv',
+      path: 'reports/multiple-html-report/TestCoverage.csv',
       header: [
         { id: 'description', title: 'Description' },
         { id: 'value', title: 'Value' },

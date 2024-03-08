@@ -18,7 +18,7 @@ jobs:
         run: npm run cypress:run
       - name: Generate multi-html-report
         run: node reporter.js
-      - name: Genarete the Test Coverage file
+      - name: Generate the Test Coverage file
         run: node testCoverage.js
       - name: Save reports folder
         if: always()
