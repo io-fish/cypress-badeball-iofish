@@ -1,40 +1,43 @@
 name: Cypress Tests
-on: [push]
+on:
+  push:
+    branches:
+      - main
 #on:
-  #schedule:
-    #- cron: '30 11 * * *' # Runs at 14:30 UTC+3 every day
+#schedule:
+#- cron: '30 11 * * *' # Runs at 14:30 UTC+3 every day
 
 jobs:
- Cypress-Test:
-   runs-on: ubuntu-latest
-   strategy:
-      matrix:
-        node-version: [18.x]
+  Cypress-Test:
+    runs-on: ubuntu-latest
+    # strategy:
+    #   matrix:
+    #     node-version: [18.x]
 
-   steps:
-     - uses: actions/checkout@v3
-     - name: Use Node.js ${{ matrix.node-version }}
-       uses: actions/setup-node@v3
-       with:
-        node-version: ${{ matrix.node-version }}
-     - name: Run Cypress Test
-       uses: cypress-io/github-action@v4
-       with:
-         command: npx cypress run --browser chrome
-     - name: Generate multi-html-report
-       if: always()
-       uses: cypress-io/github-action@v4
-       with:
-         command: node reporter.js
-     - name: Genarete the Test Coverage file
-       if: always()
-       uses: cypress-io/github-action@v4
-       with:
-         command: node testCoverage.js
-     - name: Save reports folder
-       if: always()
-       uses: actions/upload-artifact@v3
-       with:
-         name: reports
-         if-no-files-found: error
-         path: reports
+    steps:
+      - uses: actions/checkout@v4
+      # - name: Use Node.js ${{ matrix.node-version }}
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: ${{ matrix.node-version }}
+      - name: Run Cypress Test
+        uses: cypress-io/github-action@v4
+        with:
+          command: npx cypress run --browser chrome
+      - name: Generate multi-html-report
+        if: always()
+        uses: cypress-io/github-action@v4
+        with:
+          command: node reporter.js
+      - name: Genarete the Test Coverage file
+        if: always()
+        uses: cypress-io/github-action@v4
+        with:
+          command: node testCoverage.js
+      - name: Save reports folder
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: reports
+          if-no-files-found: error
+          path: reports
