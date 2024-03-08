@@ -20,14 +20,14 @@ jobs:
         run: npm install
       - name: Run Cypress tests
         run: npm run cypress:run
-      - name: Generate multi-html-report
-        run: node reporter.js
-      - name: Genarete the Test Coverage file
-        run: node testCoverage.js
-      - name: Save reports folder
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: reports
-          if-no-files-found: error
-          path: reports
+      # - name: Generate multi-html-report
+      #   run: node reporter.js
+      # - name: Genarete the Test Coverage file
+      #   run: node testCoverage.js
+      # - name: Save reports folder
+      #   if: always()
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: reports
+      #     if-no-files-found: error
+      #     path: reports
