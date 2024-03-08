@@ -1,4 +1,4 @@
-const  report = require("multiple-cucumber-html-reporter");
+const report = require("multiple-cucumber-html-reporter");
 const fs = require("fs");
 
 report.generate({
@@ -12,18 +12,19 @@ report.generate({
             name: "Chrome",
             version: "1.0.0",
         },
-        device: "Local test machine",
+        device: "Virtual test machine",
         platform: {
-            name: "Windows",
+            name: "Ubuntu",
+            version: "1.0.0",
         },
     },
-        reportName: "Cypress suite run",
-        customData: {
-            title: "Run info",
-            data: [
-                {label: "Project", value: "Cypress daily run"},
-                {label: "Environment", value: "Local"},
-                {label: 'Execution Date', value: new Date().toUTCString()},
-            ],
+    reportName: "Cypress suite run",
+    customData: {
+        title: "Run info",
+        data: [
+            { label: "Project", value: "Cypress daily run" },
+            { label: "Environment", value: "Local" },
+            { label: 'Execution Date', value: new Date().toUTCString() },
+        ],
     },
 })
